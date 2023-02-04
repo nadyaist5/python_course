@@ -6,7 +6,7 @@ count = 0
 
 for i in range(len(s)):
   if s[i] == s_new[i]:
-    count = count + 1
+    count += 1
 if count == len(s):
   print('True')
 else:
