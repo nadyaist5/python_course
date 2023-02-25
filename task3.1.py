@@ -1,14 +1,12 @@
 import json
 
 with open('wikidata_1000.json', 'r', encoding='utf-8') as f:
-    data = []
-    for row in f:
-        data.append(json.loads(row))
     dictionary = {}
-    for obj in data:
-        word = obj["label"]["value"]
+    for row in f:
+        line = json.loads(row)
+        word = line["label"]["value"]
         try:
-            dictionary[word] = obj["description"]["value"]
+            dictionary[word] = line["description"]["value"]
         except KeyError:
             dictionary[word] = 'None'
 
