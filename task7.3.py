@@ -16,7 +16,7 @@ class TestTextFile(unittest.TestCase):
         self.assertIsNotNone("text.txt")
 
     def tearDown(self):
-        shutil.rmtree('C:/Users/nadya/OneDrive/newFolder')
+        shutil.rmtree(way)
 
 if __name__ == '__main__':
     unittest.main()
