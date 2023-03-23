@@ -13,7 +13,8 @@ class TestTextFile(unittest.TestCase):
         folder()
 
     def test_not_empty(self):
-        self.assertIsNotNone("text.txt")
+        with open(way + 'text.txt', 'r') as f:
+            self.assertIsNotNone(f)
 
     def tearDown(self):
         shutil.rmtree(way)
