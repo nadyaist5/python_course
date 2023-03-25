@@ -14,7 +14,9 @@ class TestTextFile(unittest.TestCase):
 
     def test_not_empty(self):
         with open(way + 'text.txt', 'r') as f:
-            self.assertIsNotNone(f)
+            file = f.read()
+            self.assertIsNotNone(file)
+            self.assertEqual(file, "Я говорю: отчего люди не летают так, как птицы? Знаешь, мне иногда кажется, что я птица. Когда стоишь на горе, так тебя и тянет лететь. Вот так бы разбежалась, подняла руки и полетела. Попробовать нешто теперь?")
 
     def tearDown(self):
         shutil.rmtree(way)
