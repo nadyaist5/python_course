@@ -8,8 +8,6 @@ class Figure:
         pass
 
 class Oval(Figure):
-    radius1 = 0
-    radius2 = 0
 
     def __init__(self, radius1, radius2):
         self.radius1 = radius1
@@ -20,7 +18,6 @@ class Oval(Figure):
 
 
 class Square(Figure):
-    side = 0
 
     def __init__(self, side):
         self.side = side
