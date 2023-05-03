@@ -1,8 +1,5 @@
 class Fridge:
     is_empty = True
-    size = ""
-    color = ""
-    place = ""
 
     def __init__(self, size, color, place):
         self.size = size
@@ -11,17 +8,16 @@ class Fridge:
 
 
 class Human:
-    name = ""
 
     def __init__(self, name):
         self.name = name
 
-    def buy_food(self, Fridge):
-        if Fridge.is_empty:
-            Fridge.is_empty = False
-            print(Fridge.size, Fridge.color, "fridge in the ", Fridge.place, " is full. ", self.name, " filled it.")
+    def buy_food(self, fridge):
+        if fridge.is_empty:
+            fridge.is_empty = False
+            print(fridge.size, fridge.color, "fridge in the ", fridge.place, " is full. ", self.name, " filled it.")
         else:
-            print(Fridge.size, Fridge.color, "fridge in the ", Fridge.place, " is already full.")
+            print(fridge.size, fridge.color, "fridge in the ", fridge.place, " is already full.")
 
 fridge_1 = Fridge('Big', 'Red', 'Kitchen')
 fridge_2 = Fridge('Small', 'Black', 'Bedroom')
