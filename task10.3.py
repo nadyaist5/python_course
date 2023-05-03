@@ -1,8 +1,8 @@
 class Box:
     content = []
 
-    def put_in(self, Figure):
-        self.content.append(Figure)
+    def put_in(self, figure):
+        self.content.append(figure)
 
     def show_content(self):
         for f in self.content:
@@ -20,7 +20,6 @@ class Figure:
 
 
 class Ball(Figure):
-    radius = 0
 
     def __init__(self, radius, color, material):
         self.radius = radius
@@ -29,7 +28,6 @@ class Ball(Figure):
 
 
 class Cube(Figure):
-    side = 0
 
     def __init__(self, side, color, material):
         self.side = side
@@ -38,8 +36,6 @@ class Cube(Figure):
 
 
 class Pyramid(Figure):
-    side = 0
-    height = 0
 
     def __init__(self, side, height, color, material):
         self.side = side
