@@ -1,8 +1,4 @@
 class Worker:
-    name = ""
-    surname = ""
-    position = ""
-    salary = 0
 
     def __init__(self, name, surname, position, salary):
         self.name = name
@@ -56,8 +52,8 @@ class Manager(Employee):
     def __init__(self, name, surname, position, salary):
         super().__init__(name, surname, position, salary)
 
-    def add_subworker(self, Worker):
-        self.subworkers.append(Worker.name + ' ' + Worker.surname)
+    def add_subworker(self, worker):
+        self.subworkers.append(worker.name + ' ' + worker.surname)
 
     def show_info(self):
         print(self.name, self.surname, 'is a', self.position, ', has salary', self.salary, 'rub and has subworkers:', self.subworkers)
@@ -67,8 +63,8 @@ class Deputy_Director(Manager):
     def __init__(self, name, surname, position, salary):
         super().__init__(name, surname, position, salary)
 
-    def add_subworker(self, Worker):
-        self.subworkers.append(Worker.name + ' ' + Worker.surname)
+    def add_subworker(self, worker):
+        self.subworkers.append(worker.name + ' ' + worker.surname)
 
     def show_info(self):
         print(self.name, self.surname, 'is a', self.position, ', has salary', self.salary, 'rub and has subworkers:', self.subworkers)
@@ -78,8 +74,8 @@ class Director(Deputy_Director):
     def __init__(self, name, surname, position, salary):
         super().__init__(name, surname, position, salary)
 
-    def add_subworker(self, Worker):
-        self.subworkers.append(Worker.name + ' ' + Worker.surname)
+    def add_subworker(self, worker):
+        self.subworkers.append(worker.name + ' ' + worker.surname)
 
     def show_info(self):
         print(self.name, self.surname, 'is a', self.position, ', has salary', self.salary, 'rub and has subworkers:', self.subworkers)
