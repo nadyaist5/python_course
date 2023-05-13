@@ -13,14 +13,15 @@ class BankAccount:
         if password == self.__password:
             self.__balance = balance
 
-    def get_balance(self):
-        return self.__balance
+    def get_balance(self, password):
+        if password == self.__password:
+            print(self.__balance)
+            return self.__balance
 
     def show_info(self):
         print('The balance of the account', self.account_number, 'ownered by', self.owner, 'is', self.__balance, 'rubles.')
 
 account_1 = BankAccount('Nadya', 12345678)
 account_1.set_balance(2913, 1000000)
+account_1.get_balance(2913)
 account_1.show_info()
-
-
