@@ -23,8 +23,6 @@ class Corpus:
             sentence = Sentence(sent, words)
             self._sentences.append(sentence)
 
-        #print(len(self._sentences))
-
     def get_sentence(self, num_sent):
         if num_sent < 1:
             raise ValueError("Номер предложения не может быть меньше 1.")
