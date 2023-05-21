@@ -31,7 +31,7 @@ class CorpusTest(unittest.TestCase):
 
     def test_sentences(self):
         for i in range(len(self.corpus._sentences)):
-            sent_1 = self.corpus._sentences[i].sent
+            sent_1 = self.corpus._sentences[i]._sent
             sent_2 = self.test_corpus[i][0]
             self.assertEqual(sent_1, sent_2)
 
@@ -41,7 +41,7 @@ class CorpusTest(unittest.TestCase):
             sent_2 = self.test_corpus[i][1]
             wordCount = len(sent_1)
             for j in range(wordCount):
-                self.assertEqual(sent_1[j].wordform, sent_2[j][0])
+                self.assertEqual(sent_1[j]._wordform, sent_2[j][0])
 
     def test_grammems(self):
         for i in range(len(self.corpus._sentences)):
